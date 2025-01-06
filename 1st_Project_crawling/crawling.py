@@ -65,8 +65,6 @@ try:
                     ensure_ascii=False,
                     indent=4,
                 )
-                
-            continue
 
             # 연도 선택
             select_element.select_by_visible_text(year)
