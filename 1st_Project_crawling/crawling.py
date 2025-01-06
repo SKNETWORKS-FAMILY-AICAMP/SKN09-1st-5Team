@@ -58,13 +58,15 @@ try:
                 
                 data.append(entry)
             # 연도별 데이터 저장 (각 연도마다 개별 JSON 파일 생성)
-            with open(f"/car_cnt_{year}.json", "w", encoding="utf-8") as json_file:
+            with open(f"car_cnt/car_cnt_{year}.json", "w", encoding="utf-8") as json_file:
                 json.dump(
                     {"연도": year, "데이터": data},
                     json_file,
                     ensure_ascii=False,
                     indent=4,
                 )
+                
+            continue
 
             # 연도 선택
             select_element.select_by_visible_text(year)
