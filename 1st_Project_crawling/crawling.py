@@ -1,4 +1,4 @@
-import json
+# import json
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait, Select
@@ -6,6 +6,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 import mysql.connector
+import traceback
 
 # MySQL 연결
 conn = mysql.connector.connect(
@@ -35,6 +36,7 @@ cursor.execute("SET FOREIGN_KEY_CHECKS = 1; ")
 
 # Chrome 웹드라이버 설정
 options = webdriver.ChromeOptions()
+# options.add_argument("headless")
 driver = webdriver.Chrome(
     service=Service(ChromeDriverManager().install()), options=options
 )
@@ -45,7 +47,7 @@ driver.get(url)
 
 try:
     # 'year1' select 요소 로드 대기
-    WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.ID, "year1")))
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "year1")))
 
     select_element = Select(driver.find_element(By.ID, "year1"))
 
@@ -56,9 +58,7 @@ try:
         exit()
 
     # 옵션 순회
-    # for option in select_element.options:
     for year in [option.text for option in select_element.options]:
-        # year = option.text
         try:
             if year == "2025":  # 특정 연도 제외
                 continue
@@ -67,21 +67,21 @@ try:
 
             # Select 요소를 매번 다시 가져오기
             select_element = Select(
-                WebDriverWait(driver, 20).until(
+                WebDriverWait(driver, 10).until(
                     EC.presence_of_element_located((By.ID, "year1"))
                 )
             )
             select_element.select_by_visible_text(year)
 
             # 버튼 요소를 다시 가져오기
-            # button = WebDriverWait(driver, 20).until(
+            # button = WebDriverWait(driver, 10).until(
             #     EC.element_to_be_clickable((By.XPATH, '//button[contains(text(), "조회")]'))
             # )
             button = driver.find_element(By.XPATH, '//button[contains(text(), "조회")]')
             button.click()
 
             # 텍스트가 특정 연도로 변경될 때까지 대기
-            WebDriverWait(driver, 20).until(
+            WebDriverWait(driver, 10).until(
                 EC.text_to_be_present_in_element((By.ID, "title_year"), year)
             )
 
@@ -137,7 +137,10 @@ try:
 
                 # data.append(entry)
             conn.commit()
-            print("출고대수 데이터 수집 완료")
+            print("출고대수 데이터 수집 완료\n")
+        except Exception as e:
+            print(f"연도 {year} 처리 중 에러 발생: {str(e)}")
+            continue
             # 연도별 데이터 저장 (각 연도마다 개별 JSON 파일 생성)
             # with open(
             #     f"car_cnt/car_cnt_{year}.json", "w", encoding="utf-8"
@@ -149,25 +152,32 @@ try:
             #         indent=4,
             #     )
             # 체크포인트 : 출고대수를 크롤링 할동안 새로운 창 열려 에러가 발생할 수 있음
-
+    # 'year1' select 요소 로드 대기
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "year1")))
+    select_element = Select(driver.find_element(By.ID, "year1"))
+    for option in select_element.options:
+        year = option.text
+        if year == "2025":  # 특정 연도 제외
+            continue
+        try:
             select_element = Select(
-                WebDriverWait(driver, 20).until(
+                WebDriverWait(driver, 10).until(
                     EC.presence_of_element_located((By.ID, "year1"))
                 )
             )
             # 연도 선택
             select_element.select_by_visible_text(year)
-            button = WebDriverWait(driver, 20).until(
+            button = WebDriverWait(driver, 10).until(
                 EC.element_to_be_clickable((By.ID, "btnLocalCarPrc"))
             )
             button.click()
 
             # 새 창으로 전환
-            WebDriverWait(driver, 20).until(lambda d: len(d.window_handles) > 1)
+            WebDriverWait(driver, 10).until(lambda d: len(d.window_handles) > 1)
             driver.switch_to.window(driver.window_handles[-1])
 
             # 테이블 데이터 로드 대기
-            WebDriverWait(driver, 20).until(
+            WebDriverWait(driver, 10).until(
                 EC.presence_of_all_elements_located(
                     (By.CSS_SELECTOR, "table.table01 tbody tr")
                 )
@@ -227,13 +237,13 @@ try:
                             )
 
                             # 새 창 전환
-                            WebDriverWait(driver, 20).until(
+                            WebDriverWait(driver, 10).until(
                                 lambda d: len(d.window_handles) > 2
                             )
                             driver.switch_to.window(driver.window_handles[-1])
 
                             # 추가 테이블 데이터 로드 대기
-                            WebDriverWait(driver, 20).until(
+                            WebDriverWait(driver, 10).until(
                                 EC.presence_of_all_elements_located(
                                     (By.CSS_SELECTOR, "table.table01 tbody tr")
                                 )
@@ -319,7 +329,7 @@ try:
             #         ensure_ascii=False,
             #         indent=4,
             #     )
-            print(f"{year}년 데이터 저장 완료")
+            print(f"{year}년 데이터 저장 완료\n")
 
             # 창 닫기 및 원래 창으로 복귀
             driver.close()
@@ -329,8 +339,6 @@ try:
             print(f"연도 {year} 처리 중 에러 발생: {str(e)}")
             driver.switch_to.window(driver.window_handles[0])
             print(e.with_traceback(None))
-            # 에러가 난 코드 위치 출력
-            import traceback
             print(traceback.format_exc())
             continue
     conn.commit()
