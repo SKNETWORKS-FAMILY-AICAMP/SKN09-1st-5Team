@@ -2,7 +2,6 @@ import json
 import mysql.connector
 
 # MySQL 연결
-
 conn = mysql.connector.connect(
     host="localhost",
     user="root",
@@ -11,7 +10,6 @@ conn = mysql.connector.connect(
 )
 
 # MySQL 커서 생성
-
 # cursor = conn.cursor()
 cursor = conn.cursor(buffered=True)
 
