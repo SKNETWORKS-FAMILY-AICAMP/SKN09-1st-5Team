@@ -56,8 +56,9 @@ try:
         exit()
 
     # 옵션 순회
-    for option in select_element.options:
-        year = option.text
+    # for option in select_element.options:
+    for year in [option.text for option in select_element.options]:
+        # year = option.text
         try:
             if year == "2025":  # 특정 연도 제외
                 continue
