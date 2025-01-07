@@ -65,6 +65,7 @@ try:
                     ensure_ascii=False,
                     indent=4,
                 )
+            # 체크포인트 : 출고대수를 크롤링 할동안 새로운 창 열려 에러가 발생할 수 있음    
 
             # 연도 선택
             select_element.select_by_visible_text(year)
