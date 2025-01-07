@@ -318,7 +318,7 @@ try:
                                 f"추가 데이터 수집 중 에러 발생 (연도: {year}, 시도: {entry['시도']}): {str(e)}"
                             )
                             driver.switch_to.window(driver.window_handles[-1])
-
+                conn.commit()
                     # data.append(entry)
 
             # 연도별 데이터 저장 (각 연도마다 개별 JSON 파일 생성)
