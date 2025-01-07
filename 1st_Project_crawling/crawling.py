@@ -247,6 +247,9 @@ try:
             print(f"연도 {year} 처리 중 에러 발생: {str(e)}")
             driver.switch_to.window(driver.window_handles[0])
             continue
+    conn.commit()
+    cursor.close()
+    conn.close()
 
 except Exception as e:
     print(f"스크립트 실행 중 에러 발생: {str(e)}")
