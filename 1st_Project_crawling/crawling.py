@@ -67,11 +67,10 @@ try:
                 elif year == "2020":
                     if td[2].text != "승용":
                         continue
-                    print("2020년도 수집")
                     count = td[7].text.split('\n')[0].strip()
                 else:
                     count = td[7].text.split('\n')[0].strip()
-                print(td[0].text, "|", td[1].text, "|", td[2].text, "|" , count)
+                # print(td[0].text, "|", td[1].text, "|", td[2].text, "|" , count)
                 count = count.replace(",", "")
                 if count == "":
                     count = 0
