@@ -1,5 +1,6 @@
+DROP TABLE IF EXISTS `sido`;
 CREATE TABLE
-    `sido` (
+    IF NOT EXISTS `sido` (
         `id` int NOT NULL AUTO_INCREMENT,
         `name` varchar(20) CHARACTER
         SET
@@ -12,8 +13,10 @@ CREATE TABLE
             PRIMARY KEY (`id`)
     ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci;
 
+
+DROP TABLE IF EXISTS `electric_car_registration`;
 CREATE TABLE
-    `electric_car_registration` (
+    IF NOT EXISTS `electric_car_registration` (
         `id` int NOT NULL AUTO_INCREMENT,
         `sido_id` int DEFAULT NULL COMMENT '시도코드',
         `year` char(4) CHARACTER
@@ -31,8 +34,10 @@ CREATE TABLE
             CONSTRAINT `electric_car_registration_ibfk_1` FOREIGN KEY (`sido_id`) REFERENCES `sido` (`id`) ON UPDATE CASCADE
     ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci;
 
+
+DROP TABLE IF EXISTS `electric_car_subsidy`;
 CREATE TABLE
-    `electric_car_subsidy` (
+    IF NOT EXISTS `electric_car_subsidy` (
         `id` int NOT NULL AUTO_INCREMENT,
         `sido_id` int NOT NULL COMMENT '시도코드',
         `year` char(4) CHARACTER
@@ -54,8 +59,9 @@ CREATE TABLE
             CONSTRAINT `electric_car_subsidy_ibfk_1` FOREIGN KEY (`sido_id`) REFERENCES `sido` (`id`)
     ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci;
 
+DROP TABLE IF EXISTS `electric_car_subsidy_detail`;
 CREATE TABLE
-    `electric_car_subsidy_detail` (
+    IF NOT EXISTS `electric_car_subsidy_detail` (
         `id` int NOT NULL AUTO_INCREMENT,
         `sido_id` int DEFAULT NULL COMMENT '시도코드',
         `year` char(4) CHARACTER
@@ -81,8 +87,9 @@ CREATE TABLE
             CONSTRAINT `electric_car_subsidy_detail_ibfk_1` FOREIGN KEY (`sido_id`) REFERENCES `sido` (`id`)
     ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci;
 
+DROP TABLE IF EXISTS `electric_car_registration`;
 CREATE TABLE
-    `electric_car_registration` (
+    IF NOT EXISTS `electric_car_registration` (
         `id` int NOT NULL AUTO_INCREMENT,
         `sido_id` int DEFAULT NULL COMMENT '시도코드',
         `year` char(4) CHARACTER
@@ -100,8 +107,9 @@ CREATE TABLE
             CONSTRAINT `electric_car_registration_ibfk_1` FOREIGN KEY (`sido_id`) REFERENCES `sido` (`id`) ON UPDATE CASCADE
     ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci;
 
+DROP TABLE IF EXISTS `electric_car_subsidy`;
 CREATE TABLE
-    `electric_car_subsidy` (
+    IF NOT EXISTS `electric_car_subsidy` (
         `id` int NOT NULL AUTO_INCREMENT,
         `sido_id` int NOT NULL COMMENT '시도코드',
         `year` char(4) CHARACTER
@@ -123,8 +131,9 @@ CREATE TABLE
             CONSTRAINT `electric_car_subsidy_ibfk_1` FOREIGN KEY (`sido_id`) REFERENCES `sido` (`id`)
     ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci;
 
+DROP TABLE IF EXISTS `electric_car_subsidy_detail`;
 CREATE TABLE
-    `electric_car_subsidy_detail` (
+    IF NOT EXISTS `electric_car_subsidy_detail` (
         `id` int NOT NULL AUTO_INCREMENT,
         `sido_id` int DEFAULT NULL COMMENT '시도코드',
         `year` char(4) CHARACTER
@@ -151,66 +160,76 @@ CREATE TABLE
     ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci;
 
 DROP TABLE IF EXISTS `car_subsidy_2019`;
-    CREATE TABLE `car_subsidy_2019` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `year` char(4) DEFAULT NULL COMMENT '연도',
-  `sido_name` varchar(30) DEFAULT NULL COMMENT '시도명',
-  `division` varchar(30) DEFAULT NULL COMMENT '지역구분',
-  `car_class` varchar(30) DEFAULT NULL COMMENT '차종',
-  `model` varchar(70) DEFAULT NULL COMMENT '모델명',
-  `total_subsidy` int DEFAULT NULL COMMENT '보조금(만원)',
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE IF NOT EXISTS
+    `car_subsidy_2019` (
+        `id` int NOT NULL AUTO_INCREMENT,
+        `year` char(4) DEFAULT NULL COMMENT '연도',
+        `sido_name` varchar(30) DEFAULT NULL COMMENT '시도명',
+        `division` varchar(30) DEFAULT NULL COMMENT '지역구분',
+        `car_class` varchar(30) DEFAULT NULL COMMENT '차종',
+        `model` varchar(70) DEFAULT NULL COMMENT '모델명',
+        `total_subsidy` int DEFAULT NULL COMMENT '보조금(만원)',
+        PRIMARY KEY (`id`)
+    ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci;
 
 DROP TABLE IF EXISTS `car_subsidy_2020`;
-    CREATE TABLE `car_subsidy_2020` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `year` char(4) DEFAULT NULL COMMENT '연도',
-  `sido_name` varchar(30) DEFAULT NULL COMMENT '시도명',
-  `division` varchar(30) DEFAULT NULL COMMENT '지역구분',
-  `car_class` varchar(30) DEFAULT NULL COMMENT '차종',
-  `model` varchar(70) DEFAULT NULL COMMENT '모델명',
-  `total_subsidy` int DEFAULT NULL COMMENT '보조금(만원)',
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE IF NOT EXISTS
+    `car_subsidy_2020` (
+        `id` int NOT NULL AUTO_INCREMENT,
+        `year` char(4) DEFAULT NULL COMMENT '연도',
+        `sido_name` varchar(30) DEFAULT NULL COMMENT '시도명',
+        `division` varchar(30) DEFAULT NULL COMMENT '지역구분',
+        `car_class` varchar(30) DEFAULT NULL COMMENT '차종',
+        `model` varchar(70) DEFAULT NULL COMMENT '모델명',
+        `total_subsidy` int DEFAULT NULL COMMENT '보조금(만원)',
+        PRIMARY KEY (`id`)
+    ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci;
 
 DROP TABLE IF EXISTS `car_subsidy_2021`;
-    CREATE TABLE `car_subsidy_2021` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `year` char(4) DEFAULT NULL COMMENT '연도',
-  `sido_name` varchar(30) DEFAULT NULL COMMENT '시도명',
-  `division` varchar(30) DEFAULT NULL COMMENT '지역구분',
-  `car_class` varchar(30) DEFAULT NULL COMMENT '차종',
-  `model` varchar(70) DEFAULT NULL COMMENT '모델명',
-  `total_subsidy` int DEFAULT NULL COMMENT '보조금(만원)',
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE IF NOT EXISTS
+    `car_subsidy_2021` (
+        `id` int NOT NULL AUTO_INCREMENT,
+        `year` char(4) DEFAULT NULL COMMENT '연도',
+        `sido_name` varchar(30) DEFAULT NULL COMMENT '시도명',
+        `division` varchar(30) DEFAULT NULL COMMENT '지역구분',
+        `car_class` varchar(30) DEFAULT NULL COMMENT '차종',
+        `model` varchar(70) DEFAULT NULL COMMENT '모델명',
+        `total_subsidy` int DEFAULT NULL COMMENT '보조금(만원)',
+        PRIMARY KEY (`id`)
+    ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci;
 
 DROP TABLE IF EXISTS `car_subsidy_2022`;
-    CREATE TABLE `car_subsidy_2022` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `year` char(4) DEFAULT NULL COMMENT '연도',
-  `sido_name` varchar(30) DEFAULT NULL COMMENT '시도명',
-  `division` varchar(30) DEFAULT NULL COMMENT '지역구분',
-  `car_class` varchar(30) DEFAULT NULL COMMENT '차종',
-  `model` varchar(70) DEFAULT NULL COMMENT '모델명',
-  `total_subsidy` int DEFAULT NULL COMMENT '보조금(만원)',
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE IF NOT EXISTS
+    `car_subsidy_2022` (
+        `id` int NOT NULL AUTO_INCREMENT,
+        `year` char(4) DEFAULT NULL COMMENT '연도',
+        `sido_name` varchar(30) DEFAULT NULL COMMENT '시도명',
+        `division` varchar(30) DEFAULT NULL COMMENT '지역구분',
+        `car_class` varchar(30) DEFAULT NULL COMMENT '차종',
+        `model` varchar(70) DEFAULT NULL COMMENT '모델명',
+        `total_subsidy` int DEFAULT NULL COMMENT '보조금(만원)',
+        PRIMARY KEY (`id`)
+    ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci;
 
 DROP TABLE IF EXISTS `car_subsidy_2023`;
-    CREATE TABLE `car_subsidy_2023` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `year` char(4) DEFAULT NULL COMMENT '연도',
-  `sido_name` varchar(30) DEFAULT NULL COMMENT '시도명',
-  `division` varchar(30) DEFAULT NULL COMMENT '지역구분',
-  `car_class` varchar(30) DEFAULT NULL COMMENT '차종',
-  `model` varchar(70) DEFAULT NULL COMMENT '모델명',
-  `total_subsidy` int DEFAULT NULL COMMENT '보조금(만원)',
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-CREATE TABLE
+CREATE TABLE IF NOT EXISTS
+    `car_subsidy_2023` (
+        `id` int NOT NULL AUTO_INCREMENT,
+        `year` char(4) DEFAULT NULL COMMENT '연도',
+        `sido_name` varchar(30) DEFAULT NULL COMMENT '시도명',
+        `division` varchar(30) DEFAULT NULL COMMENT '지역구분',
+        `car_class` varchar(30) DEFAULT NULL COMMENT '차종',
+        `model` varchar(70) DEFAULT NULL COMMENT '모델명',
+        `total_subsidy` int DEFAULT NULL COMMENT '보조금(만원)',
+        PRIMARY KEY (`id`)
+    ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci;
+
+CREATE TABLE IF NOT EXISTS
     `electric_car_registration` (
         `id` int NOT NULL AUTO_INCREMENT,
         `sido_id` int DEFAULT NULL COMMENT '시도코드',
@@ -229,7 +248,7 @@ CREATE TABLE
             CONSTRAINT `electric_car_registration_ibfk_1` FOREIGN KEY (`sido_id`) REFERENCES `sido` (`id`) ON UPDATE CASCADE
     ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci;
 
-CREATE TABLE
+CREATE TABLE IF NOT EXISTS
     `electric_car_subsidy` (
         `id` int NOT NULL AUTO_INCREMENT,
         `sido_id` int NOT NULL COMMENT '시도코드',
@@ -252,7 +271,7 @@ CREATE TABLE
             CONSTRAINT `electric_car_subsidy_ibfk_1` FOREIGN KEY (`sido_id`) REFERENCES `sido` (`id`)
     ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci;
 
-CREATE TABLE
+CREATE TABLE IF NOT EXISTS
     `electric_car_subsidy_detail` (
         `id` int NOT NULL AUTO_INCREMENT,
         `sido_id` int DEFAULT NULL COMMENT '시도코드',
@@ -279,15 +298,16 @@ CREATE TABLE
             CONSTRAINT `electric_car_subsidy_detail_ibfk_1` FOREIGN KEY (`sido_id`) REFERENCES `sido` (`id`)
     ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci;
 
-
 DROP TABLE IF EXISTS `car_subsidy_2024`;
-    CREATE TABLE `car_subsidy_2024` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `year` char(4) DEFAULT NULL COMMENT '연도',
-  `sido_name` varchar(30) DEFAULT NULL COMMENT '시도명',
-  `division` varchar(30) DEFAULT NULL COMMENT '지역구분',
-  `car_class` varchar(30) DEFAULT NULL COMMENT '차종',
-  `model` varchar(70) DEFAULT NULL COMMENT '모델명',
-  `total_subsidy` int DEFAULT NULL COMMENT '보조금(만원)',
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE IF NOT EXISTS
+    `car_subsidy_2024` (
+        `id` int NOT NULL AUTO_INCREMENT,
+        `year` char(4) DEFAULT NULL COMMENT '연도',
+        `sido_name` varchar(30) DEFAULT NULL COMMENT '시도명',
+        `division` varchar(30) DEFAULT NULL COMMENT '지역구분',
+        `car_class` varchar(30) DEFAULT NULL COMMENT '차종',
+        `model` varchar(70) DEFAULT NULL COMMENT '모델명',
+        `total_subsidy` int DEFAULT NULL COMMENT '보조금(만원)',
+        PRIMARY KEY (`id`)
+    ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci;
