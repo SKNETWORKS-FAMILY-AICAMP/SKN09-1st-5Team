@@ -29,7 +29,7 @@ try:
     # 옵션 순회
     # options = select_element.options[:]
     
-    for year in ["2019", "2020", "2021", "2022", "2023", "2024", "2025"][:2]:
+    for year in ["2019", "2020", "2021", "2022", "2023", "2024", "2025"]:
         try:
             # year = option.text
             print(f"현재 연도 처리 중: {year}")
