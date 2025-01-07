@@ -31,6 +31,8 @@ try:
     
     for year in ["2019", "2020", "2021", "2022", "2023", "2024", "2025"]:
         try:
+            if year == "2025":  # 특정 연도 제외
+                continue
             # year = option.text
             print(f"현재 연도 처리 중: {year}")
             
@@ -51,8 +53,6 @@ try:
                 EC.text_to_be_present_in_element((By.ID, "title_year"), year)
             )
 
-            if year == "2025":  # 특정 연도 제외
-                continue
             data = []
             # editForm > div.contentList.fz13 > table > tbody > tr:nth-child(1)
             ## TODO: 전기차 출고대수 데이터 수집
@@ -60,7 +60,7 @@ try:
             trs = tbody.find_elements(By.TAG_NAME, "tr")
             for tr in trs:
                 td = tr.find_elements(By.TAG_NAME, "td")
-                count = 0
+                count = ""
                 if year == "2019":
                     count = td[6].text.split('\n')[0].strip()
                 elif year == "2020":
@@ -71,12 +71,14 @@ try:
                 else:
                     count = td[7].text.split('\n')[0].strip()
                 print(td[0].text, "|", td[1].text, "|", td[2].text, "|" , count)
-                # print(count)
+                count = count.replace(",", "")
+                if count == "":
+                    count = 0
                 entry = {
                     "시도": td[0].text,
                     "지역구분": td[1].text,
                     "차종구분": td[2].text if td[2].text != "다운로드" else "전기승용",
-                    "출고대수": count
+                    "출고대수": count,
                 }
                 data.append(entry)
             # 연도별 데이터 저장 (각 연도마다 개별 JSON 파일 생성)
