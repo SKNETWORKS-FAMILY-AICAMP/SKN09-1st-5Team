@@ -5,6 +5,33 @@ from selenium.webdriver.support.ui import WebDriverWait, Select
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
+import mysql.connector
+
+# MySQL 연결
+conn = mysql.connector.connect(
+    host="localhost",
+    user="root",
+    password="mysql",
+    database="ecardb",
+)
+
+# MySQL 커서 생성
+# cursor = conn.cursor()
+cursor = conn.cursor(buffered=True)
+
+# 데이터베이스 초기화
+cursor.execute("SET FOREIGN_KEY_CHECKS = 0; ")
+cursor.execute("TRUNCATE TABLE electric_car_registration")
+cursor.execute("TRUNCATE TABLE electric_car_subsidy")
+cursor.execute("TRUNCATE TABLE electric_car_subsidy_detail")
+cursor.execute("TRUNCATE TABLE sido")
+cursor.execute("TRUNCATE TABLE car_subsidy_2019")
+cursor.execute("TRUNCATE TABLE car_subsidy_2020")
+cursor.execute("TRUNCATE TABLE car_subsidy_2021")
+cursor.execute("TRUNCATE TABLE car_subsidy_2022")
+cursor.execute("TRUNCATE TABLE car_subsidy_2023")
+cursor.execute("TRUNCATE TABLE car_subsidy_2024")
+cursor.execute("SET FOREIGN_KEY_CHECKS = 1; ")
 
 # Chrome 웹드라이버 설정
 options = webdriver.ChromeOptions()
@@ -80,6 +107,23 @@ try:
                     "차종구분": td[2].text.strip() if td[2].text not in ["","다운로드"] else "전기승용",
                     "출고대수": count,
                 }
+                cursor.execute("SELECT id FROM sido WHERE division = %s", (entry["지역구분"],))
+
+                try:
+                    sido_id = cursor.fetchone()[0]
+                except:
+                    cursor.execute(
+                        "INSERT INTO sido (name, division) VALUES (%s, %s)",
+                        (entry["시도"], entry["지역구분"]),
+                    )
+                    conn.commit()
+                    sido_id = cursor.lastrowid
+
+                cursor.execute(
+                    "INSERT INTO electric_car_registration (sido_id, year, class, regists) VALUES (%s, %s, %s, %s)",
+                    (sido_id, year, entry["차종구분"], entry["출고대수"]),
+                )
+                conn.commit()
                 data.append(entry)
             # 연도별 데이터 저장 (각 연도마다 개별 JSON 파일 생성)
             with open(f"car_cnt/car_cnt_{year}.json", "w", encoding="utf-8") as json_file:
