@@ -203,16 +203,32 @@ try:
                                 if (
                                     len(sub_cols) >= 6
                                 ):  # 차종, 제조사, 모델명 등 추가 항목 포함
-                                    sub_data.append(
-                                        {
-                                            "차종": sub_cols[0].text.strip(),
-                                            "제조사": sub_cols[1].text.strip(),
-                                            "모델명": sub_cols[2].text.strip(),
-                                            "국비(만원)": sub_cols[3].text.strip(),
-                                            "지방비(만원)": sub_cols[4].text.strip(),
-                                            "보조금(만원)": sub_cols[5].text.strip(),
-                                        }
-                                    )
+                                    if (
+                                        len(sub_cols) <= 6
+                                    ):  # 차종, 제조사, 모델명 등 추가 항목 포함
+                                        sub_data.append(
+                                            {
+                                                "차종": sub_cols[0].text.strip(),
+                                                "제조사": sub_cols[1].text.strip(),
+                                                "모델명": sub_cols[2].text.strip(),
+                                                "국비(만원)": sub_cols[3].text.strip(),
+                                                "지방비(만원)": sub_cols[4].text.strip(),
+                                                "보조금(만원)": sub_cols[5].text.strip(),
+                                            }
+                                        )
+
+                                    elif (len(sub_cols) == 7):
+                                        sub_data.append(
+                                            {
+                                                "차종": sub_cols[0].text.strip(),
+                                                "제조사": sub_cols[1].text.strip(),
+                                                "모델명": sub_cols[2].text.strip(),
+                                                "국비(만원)": sub_cols[3].text.strip(),
+                                                "지방비(만원)": sub_cols[4].text.strip(),
+                                                "보급목표이행보조금(만원)": sub_cols[5].text.strip(),
+                                                "보조금(만원)": sub_cols[6].text.strip(),
+                                            }
+                                        )
 
                             # 추가 데이터를 entry에 저장
                             entry["차종별 보조금"] = sub_data
