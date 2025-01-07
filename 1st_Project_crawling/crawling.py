@@ -43,9 +43,10 @@ try:
             select_element.select_by_visible_text(year)
             
             # 버튼 요소를 다시 가져오기
-            button = WebDriverWait(driver, 20).until(
-                EC.element_to_be_clickable((By.XPATH, '//button[contains(text(), "조회")]'))
-            )
+            # button = WebDriverWait(driver, 20).until(
+            #     EC.element_to_be_clickable((By.XPATH, '//button[contains(text(), "조회")]'))
+            # )
+            button = driver.find_element(By.XPATH, '//button[contains(text(), "조회")]')
             button.click()
 
             # 텍스트가 특정 연도로 변경될 때까지 대기
