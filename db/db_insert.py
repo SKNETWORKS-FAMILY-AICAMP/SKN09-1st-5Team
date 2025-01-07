@@ -12,9 +12,8 @@ conn = mysql.connector.connect(
 
 # MySQL 커서 생성
 
-cursor = conn.cursor()
-
-# cursor.execute("DROP TABLE IF EXISTS subsidy_data")
+# cursor = conn.cursor()
+cursor = conn.cursor(buffered=True)
 
 for year in range(2019, 2025):
     f = open(f"car_cnt/car_cnt_{year}.json")
@@ -48,9 +47,8 @@ for year in range(2019, 2025):
 
         conn.commit()
 
-        f = open(f"data_city/subsidy_data_{year}.json")
+    f = open(f"data_city/subsidy_data_{year}.json")
     json_data = json.load(f)
-    # print(json_data)
     f.close()
 
     for data in json_data["데이터"]:
@@ -72,11 +70,23 @@ for year in range(2019, 2025):
             )
             conn.commit()
             sido_id = cursor.lastrowid
-
+        
         cursor.execute(
             "INSERT INTO electric_car_subsidy (sido_id, year, subsidy) VALUES (%s, %s, %s)",
             (sido_id, year, subsidy),
         )
+        # 차종별 보조금이 있는지 체크
+        if data.get("차종별 보조금"):
+            for entry in data["차종별 보조금"]:
+                car_class = entry['차종']
+                model = entry['모델명']
+                total_subsidy = entry["보조금(만원)"].replace(",", "")
+
+                insert_query = f"""
+                    INSERT INTO car_subsidy_{year} (year, sido_name, division, car_class, model, total_subsidy)
+                    VALUES (%s, %s, %s, %s, %s, %s)
+                """
+                cursor.execute(insert_query, (year, sido, division, car_class, model, total_subsidy))
 
         conn.commit()
 cursor.close()
