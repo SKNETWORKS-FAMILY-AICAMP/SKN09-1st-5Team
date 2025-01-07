@@ -15,6 +15,20 @@ conn = mysql.connector.connect(
 # cursor = conn.cursor()
 cursor = conn.cursor(buffered=True)
 
+# 데이터베이스 초기화
+cursor.execute("SET FOREIGN_KEY_CHECKS = 0; ")
+cursor.execute("TRUNCATE TABLE electric_car_registration")
+cursor.execute("TRUNCATE TABLE electric_car_subsidy")
+cursor.execute("TRUNCATE TABLE electric_car_subsidy_detail")
+cursor.execute("TRUNCATE TABLE sido")
+cursor.execute("TRUNCATE TABLE car_subsidy_2019")
+cursor.execute("TRUNCATE TABLE car_subsidy_2020")
+cursor.execute("TRUNCATE TABLE car_subsidy_2021")
+cursor.execute("TRUNCATE TABLE car_subsidy_2022")
+cursor.execute("TRUNCATE TABLE car_subsidy_2023")
+cursor.execute("TRUNCATE TABLE car_subsidy_2024")
+cursor.execute("SET FOREIGN_KEY_CHECKS = 1; ")
+
 for year in range(2019, 2025):
     f = open(f"car_cnt/car_cnt_{year}.json")
     json_data = json.load(f)
