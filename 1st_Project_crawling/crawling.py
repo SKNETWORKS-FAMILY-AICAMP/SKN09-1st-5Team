@@ -37,19 +37,19 @@ try:
             print(f"현재 연도 처리 중: {year}")
             
             # Select 요소를 매번 다시 가져오기
-            select_element = Select(WebDriverWait(driver, 10).until(
+            select_element = Select(WebDriverWait(driver, 20).until(
                 EC.presence_of_element_located((By.ID, "year1"))
             ))
             select_element.select_by_visible_text(year)
             
             # 버튼 요소를 다시 가져오기
-            button = WebDriverWait(driver, 10).until(
+            button = WebDriverWait(driver, 20).until(
                 EC.element_to_be_clickable((By.XPATH, '//button[contains(text(), "조회")]'))
             )
             button.click()
 
             # 텍스트가 특정 연도로 변경될 때까지 대기
-            WebDriverWait(driver, 10).until(
+            WebDriverWait(driver, 20).until(
                 EC.text_to_be_present_in_element((By.ID, "title_year"), year)
             )
 
