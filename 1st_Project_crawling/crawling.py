@@ -75,9 +75,9 @@ try:
                 if count == "":
                     count = 0
                 entry = {
-                    "시도": td[0].text,
-                    "지역구분": td[1].text,
-                    "차종구분": td[2].text if td[2].text != "다운로드" else "전기승용",
+                    "시도": td[0].text.strip(),
+                    "지역구분": td[1].text.strip(),
+                    "차종구분": td[2].text.strip() if td[2].text not in ["","다운로드"] else "전기승용",
                     "출고대수": count,
                 }
                 data.append(entry)
