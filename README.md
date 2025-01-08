@@ -127,7 +127,6 @@ streamlit run app.py
     <td><img src="https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white"/></td>
     <td><img src="https://img.shields.io/badge/mysql-4479A1?style=for-the-badge&logo=mysql&logoColor=white"/></td>
     <td><img src="https://img.shields.io/badge/Plotly-3F4F75?style=for-the-badge&logo=Plotly&logoColor=white"/></td>
-    <td></td>
   </tr>
 </table>
 
