@@ -4,7 +4,7 @@
 > **SK Networks AI CAMP 9기** <br/> **개발기간: 2025.01.07 ~ 2025.01.08** <br/> **팀명: 무공해즈** 
   
 <div align="center">
-<img scr="https://github.com/SKNETWORKS-FAMILY-AICAMP/SKN09-1st-5Team/blob/readme/READ_ME/img_readme/sk_encore.png" width="1000" alt="image">
+  <img src="https://github.com/SKNETWORKS-FAMILY-AICAMP/SKN09-1st-5Team/blob/readme/READ_ME/img_readme/sk_encore.png" width="1000" alt="image"/>
 </div>
 
 <br>
@@ -99,43 +99,30 @@ streamlit run app.py
 
 # Tech Stack (기술 스택)
 
->### <span style="color:white"> Co-Work Tool </span>
+>### <span style="color:white"> 개발환경 및 도구 </span>
 <table>
   <tr>
-    <td>Communication & Messenger</td>
-    <td><img src="https://img.shields.io/badge/Discord-5865F2?style=flat&logo=Discord&logoColor=white"/></td>
-    <td><img src="https://img.shields.io/badge/Notion-000000?style=flat&logo=Notion&logoColor=white"/></td>
-  </tr>
-  <tr>
-    <td>Development & Merge</td>
-    <td><img src="https://img.shields.io/badge/Git-F05032?style=flat&logo=Git&logoColor=white"/></td>
-    <td><img src="https://img.shields.io/badge/GitHub-181717?style=flat&logo=GitHub&logoColor=white"/></td>
+    <td><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=Discord&logoColor=white"/></td>
+    <td><img src="https://img.shields.io/badge/Notion-000000?style=for-the-badge&logo=Notion&logoColor=white"/></td>
+    <td><img src="https://img.shields.io/badge/VScode-007ACC?style=for-the-badge&logo=Vscode&logoColor=white"/></td>
+    <td><img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=Git&logoColor=white"/></td>
+    <td><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=GitHub&logoColor=white"/></td>
   </tr>  
 </table>
 
->### <span style="color:white"> Streamlit </span>
+>### <span style="color:white"> UI </span>
 <table>
   <tr>
-    <td>PyCharm</td>
-    <td><img src="https://img.shields.io/badge/pycharm-%23000000?style=flat&logo=pycharm&logoColor=white"/></td>
-    <td><img src="https://img.shields.io/badge/python-3776AB?style=flat&logo=python&logoColor=white"/></td>
-    <td><img src="https://img.shields.io/badge/-Streamlit-FF4B4B?style=flat&logo=streamlit&logoColor=white"/></td>
-    <td></td>
-    <td></td>
+    <td><img src="https://img.shields.io/badge/-Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white"/></td>
   </tr>
 </table>
 
-
->### <span style="color:white"> Data Server </span>
+>### <span style="color:white"> 데이터 수집 및 처리 </span>
 <table>
   <tr>
-    <td>PyCharm</td>
-    <td><img src="https://img.shields.io/badge/pycharm-%23000000?style=flat&logo=pycharm&logoColor=white"/></td>
-    <td><img src="https://img.shields.io/badge/python-3776AB?style=flat&logo=python&logoColor=white"/></td>
-  </tr>  
-  <tr>
-    <td>RDBMS</td>
-    <td><img src="https://img.shields.io/badge/mysql-4479A1?style=flat&logo=mysql&logoColor=white"/></td>
+    <td><img src="https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=python&logoColor=white"/></td>
+    <td><img src="https://img.shields.io/badge/Selenium-43B02A?style=for-the-badge&logo=selenium&logoColor=white"/></td>
+    <td><img src="https://img.shields.io/badge/mysql-4479A1?style=for-the-badge&logo=mysql&logoColor=white"/></td>
     <td></td>
   </tr>
 </table>
@@ -146,13 +133,17 @@ streamlit run app.py
 
 
 # 요구사항 명세서
-<div align="center"><img scr="https://github.com/SKNETWORKS-FAMILY-AICAMP/SKN09-1st-5Team/blob/readme/READ_ME/img_readme/sk_encore.png" width="1000" alt="요구사항 명세서"></div>
+<div align="center">
+  <img src="https://github.com/SKNETWORKS-FAMILY-AICAMP/SKN09-1st-5Team/blob/readme/READ_ME/img_readme/sk_encore.png" width="1000" alt="요구사항 명세서"/>
+</div>
 
 <br>
 </br>
 
 # ERD
-<div align="center"><img src="https://github.com/SKNETWORKS-FAMILY-AICAMP/SKN09-1st-5Team/blob/readme/READ_ME/img_readme/erd_fin.png" width="1000" alt="ERD"/></div>
+<div align="center">
+  <img src="https://github.com/SKNETWORKS-FAMILY-AICAMP/SKN09-1st-5Team/blob/readme/READ_ME/img_readme/erd_fin.png" width="1000" alt="ERD"/>
+</div>
 
 
 <br>
