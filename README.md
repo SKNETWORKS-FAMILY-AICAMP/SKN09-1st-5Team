@@ -30,7 +30,7 @@
       </td>
       <td align="center">
         <div>
-          <img src="https://github.com/SKNETWORKS-FAMILY-AICAMP/SKN09-1st-5Team/blob/readme/img_readme/minion_yj.jpg" width="200px;" alt="이윤재"/>
+          <img src="https://github.com/SKNETWORKS-FAMILY-AICAMP/SKN09-1st-5Team/blob/main/img_readme/minion_yj.jpg" width="200px;" alt="이윤재"/>
         </div>
       </td>
       <td align="center">
