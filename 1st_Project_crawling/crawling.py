@@ -301,10 +301,10 @@ try:
                                     total_subsidy = 0
 
                                 insert_query = f"""
-                                    INSERT INTO car_subsidy_{year} (year, sido_name, division, car_class, model, total_subsidy)
+                                    INSERT INTO car_subsidy_{year} (year, sido_id car_class, model, total_subsidy)
                                     VALUES (%s, %s, %s, %s, %s, %s)
                                 """
-                                cursor.execute(insert_query, (year, entry["시도"], entry["지역구분"], car_class, model, total_subsidy))
+                                cursor.execute(insert_query, (year, sido_id, car_class, model, total_subsidy))
 
                             # 추가 데이터를 entry에 저장
                             # entry["차종별 보조금"] = sub_data
