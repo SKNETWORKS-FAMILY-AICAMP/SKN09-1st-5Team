@@ -4,7 +4,7 @@
 > **SK Networks AI CAMP 9기** <br/> **개발기간: 2025.01.07 ~ 2025.01.08** <br/> **팀명: 무공해즈** 
   
 <div align="center">
-  <img src="https://github.com/SKNETWORKS-FAMILY-AICAMP/SKN09-1st-5Team/blob/readme/READ_ME/img_readme/sk_encore.png" width="1000" alt="image"/>
+  <img src="https://github.com/SKNETWORKS-FAMILY-AICAMP/SKN09-1st-5Team/blob/readme/img_readme/sk_encore.png" width="1000" alt="image"/>
 </div>
 
 <br>
@@ -23,19 +23,19 @@
     <tr>
       <td align="center">
         <div>
-          <img src="https://github.com/SKNETWORKS-FAMILY-AICAMP/SKN09-1st-5Team/blob/readme/READ_ME/img_readme/minion_kw.jpg" width="200px;" alt="이광운"/>
+          <img src="https://github.com/SKNETWORKS-FAMILY-AICAMP/SKN09-1st-5Team/blob/readme/img_readme/minion_kw.jpg" width="200px;" alt="이광운"/>
         </div>
       </td>
       <td align="center">
         <div>
-          <img src="https://github.com/SKNETWORKS-FAMILY-AICAMP/SKN09-1st-5Team/blob/readme/READ_ME/img_readme/minion_yj.jpg" width="200px;" alt="이윤재"/>
+          <img src="https://github.com/SKNETWORKS-FAMILY-AICAMP/SKN09-1st-5Team/blob/readme/img_readme/minion_yj.jpg" width="200px;" alt="이윤재"/>
         </div>
       </td>
       <td align="center">
-        <img src="https://github.com/SKNETWORKS-FAMILY-AICAMP/SKN09-1st-5Team/blob/readme/READ_ME/img_readme/minion_sy.jpg" width="200px;" alt="임수연"/>
+        <img src="https://github.com/SKNETWORKS-FAMILY-AICAMP/SKN09-1st-5Team/blob/readme/img_readme/minion_sy.jpg" width="200px;" alt="임수연"/>
       </td>
       <td align="center">
-        <img src="https://github.com/SKNETWORKS-FAMILY-AICAMP/SKN09-1st-5Team/blob/readme/READ_ME/img_readme/minion_jy.jpg" width="200px;" alt="허정윤"/>
+        <img src="https://github.com/SKNETWORKS-FAMILY-AICAMP/SKN09-1st-5Team/blob/readme/img_readme/minion_jy.jpg" width="200px;" alt="허정윤"/>
       </td>
     </tr>
     <tr>
@@ -134,7 +134,7 @@ streamlit run app.py
 
 # 요구사항 명세서
 <div align="center">
-  <img src="https://github.com/SKNETWORKS-FAMILY-AICAMP/SKN09-1st-5Team/blob/readme/READ_ME/img_readme/sk_encore.png" width="1000" alt="요구사항 명세서"/>
+  <img src="https://github.com/SKNETWORKS-FAMILY-AICAMP/SKN09-1st-5Team/blob/readme/img_readme/%EC%9A%94%EA%B5%AC%EC%82%AC%ED%95%AD%20%EB%AA%85%EC%84%B8%EC%84%9C.png" width="1000" alt="요구사항 명세서"/>
 </div>
 
 <br>
@@ -142,7 +142,8 @@ streamlit run app.py
 
 # ERD
 <div align="center">
-  <img src="https://github.com/SKNETWORKS-FAMILY-AICAMP/SKN09-1st-5Team/blob/readme/READ_ME/img_readme/erd_fin.png" width="1000" alt="ERD"/>
+  <img src="https://github.com/SKNETWORKS-FAMILY-AICAMP/SKN09-1st-5Team/blob/readme/img_readme/erd_fin.png" width="1000" alt="ERD"/>
+
 </div>
 
 
