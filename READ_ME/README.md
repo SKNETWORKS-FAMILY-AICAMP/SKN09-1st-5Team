@@ -134,6 +134,7 @@
 </br>
 
 # ERD
+<td><img src="https://github.com/SKNETWORKS-FAMILY-AICAMP/SKN09-1st-5Team/blob/readme/READ_ME/img_readme/ERD.png"/></td>
 
 
 <br>
