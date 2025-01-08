@@ -3,7 +3,9 @@
 
 > **SK Networks AI CAMP 9기** <br/> **개발기간: 2025.01.07 ~ 2025.01.08** <br/> **팀명: 무공해즈** 
   
-  <img scr="https://github.com/SKNETWORKS-FAMILY-AICAMP/SKN09-1st-5Team/blob/readme/READ_ME/img_readme/sk_encore.png" width="1000" alt="image"> 
+<div align="center">
+<img scr="https://github.com/SKNETWORKS-FAMILY-AICAMP/SKN09-1st-5Team/blob/readme/READ_ME/img_readme/sk_encore.png" width="1000" alt="image">
+</div>
 
 <br>
 </br>  
@@ -57,7 +59,7 @@
 ### ✅프로젝트 소개
 환경부(https://ev.or.kr/nportal/main.do#)의 전기차 등록대수, 지역별 보조금, 차종별 보조금 정보를 크롤링하여 데이터를 수집, DB에 저장한 뒤, 수집한 데이터를 시각화 및 분석하여 사용자에게 지역별 보조금에 따른 전기차 등록수 증감 추이를 보여주고 그에 따른 FAQ 제공하도록 설계되었습니다.<br>
 ### ✅프로젝트 필요성(배경) 
-💡전기차 등록대수와 보조금과의 상관관계에 대한 자료의 부재\
+💡전기차 등록대수와 지역별 보조금에 대한 자료의 부재\
 매년 전기차 등록대수가 증가하고 있는 현재 추세가 지역별 보조금과 유의미한 관계가 있는지에 대하여 파악해 볼 필요성을 느꼈고 이를 통해 도출된 자료가 관련 부서와 기업에 참고가 될 수 있을 것이라라 판단하였습니다.
 
 ### ✅프로젝트 목표
@@ -142,20 +144,15 @@ streamlit run app.py
 <br>
 </br>
 
-# WBS
-
-
-<br>
-</br>
 
 # 요구사항 명세서
-
+<div align="center"><img scr="https://github.com/SKNETWORKS-FAMILY-AICAMP/SKN09-1st-5Team/blob/readme/READ_ME/img_readme/sk_encore.png" width="1000" alt="요구사항 명세서"></div>
 
 <br>
 </br>
 
 # ERD
-<td><img src="https://github.com/SKNETWORKS-FAMILY-AICAMP/SKN09-1st-5Team/blob/readme/READ_ME/img_readme/ERD.png" width="1000"/></td>
+<div align="center"><img src="https://github.com/SKNETWORKS-FAMILY-AICAMP/SKN09-1st-5Team/blob/readme/READ_ME/img_readme/erd_fin.png" width="1000" alt="ERD"/></div>
 
 
 <br>
@@ -175,7 +172,7 @@ Streamlit session_state를 잘 고려하자.... 테스트는 여러 기기에서
 Table에서 컬럼 수정이  필요할 때,  Database에서 차트를 구성할 때 필요한 자료를 어디에서 가져올지, 모두 ERD가 바탕이 된다는 것을 깨닫고 사전 ERD 작업의 중요성을 느끼게 되었다.
 
 🐵<b>임수연</b>🐵\
-듬직한 팀원들과 함께 셀리니움 크롤링 코드를 짜고 야근하며 에러도 잡고 DB저장까지,\
+듬직한 팀원들과 함께 셀레니움 코드를 짜고 실행시켜 DB저장까지,\
 지난 2주간 배웠던 스택들을 이틀동안 다양하게 시도하여 깨달음이 많은 이틀이었습니다🫠
 
 🍊<b>허정윤</b>🍊\
