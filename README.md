@@ -145,17 +145,16 @@ streamlit run app.py
 
 # ERD
 <div align="center">
-  <img src="" width="1000" alt="1"/>
-  <img src="" width="1000" alt="1"/>
+  <img src="https://github.com/SKNETWORKS-FAMILY-AICAMP/SKN09-1st-5Team/blob/main/img_readme/erd_fin.png" width="1000" alt="ERD"/>
 </div>
-
 
 <br>
 </br>
 
 # 수행결과(시연 페이지)
 <div align="center">
-  <img src="https://github.com/SKNETWORKS-FAMILY-AICAMP/SKN09-1st-5Team/blob/main/img_readme/erd_fin.png" width="1000" alt="ERD"/>
+  <img src="https://github.com/SKNETWORKS-FAMILY-AICAMP/SKN09-1st-5Team/blob/main/img_readme/main_page.png" width="1000" alt="1"/>
+  <img src="https://github.com/SKNETWORKS-FAMILY-AICAMP/SKN09-1st-5Team/blob/main/img_readme/second_page.png" width="1000" alt="2"/>
 </div>
 
 <br>
