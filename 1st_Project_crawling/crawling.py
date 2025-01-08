@@ -12,9 +12,13 @@ import traceback
 conn = mysql.connector.connect(
     host="localhost",
     user="root",
-    password="mysql",
+    password="비밀번호",
     database="ecardb",
 )
+#DB CREATE 피저는 추가할 것!!! 
+#일단 주석으로 설명 + 리드미에 추가할 것
+
+# db폴더 ddl.spl 실행할 것것
 
 # MySQL 커서 생성
 # cursor = conn.cursor()
