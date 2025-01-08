@@ -300,8 +300,8 @@ try:
                                     total_subsidy = 0
 
                                 insert_query = f"""
-                                    INSERT INTO car_subsidy_{year} (year, sido_id car_class, model, total_subsidy)
-                                    VALUES (%s, %s, %s, %s, %s, %s)
+                                    INSERT INTO car_subsidy_{year} (year, sido_id, car_class, model, total_subsidy)
+                                    VALUES (%s, %s, %s, %s, %s)
                                 """
                                 cursor.execute(insert_query, (year, sido_id, car_class, model, total_subsidy))
 
