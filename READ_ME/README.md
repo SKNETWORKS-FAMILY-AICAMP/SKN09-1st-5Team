@@ -3,7 +3,7 @@
 
 > **SK Networks AI CAMP 9기** <br/> **개발기간: 2025.01.07 ~ 2025.01.08** <br/> **팀명: 무공해즈** 
   
-  <img width="1000" alt="image" src=""> 
+  <img scr="https://github.com/SKNETWORKS-FAMILY-AICAMP/SKN09-1st-5Team/blob/readme/READ_ME/img_readme/sk_encore.png" width="1000" alt="image"> 
 
 <br>
 </br>  
@@ -21,19 +21,19 @@
     <tr>
       <td align="center">
         <div>
-          <img src=""width="200px;" alt="이광운"/>
+          <img src="https://github.com/SKNETWORKS-FAMILY-AICAMP/SKN09-1st-5Team/blob/readme/READ_ME/img_readme/minion_kw.jpg" width="200px;" alt="이광운"/>
         </div>
       </td>
       <td align="center">
         <div>
-          <img src=""width="200px;" alt="이윤재"/>
+          <img src="https://github.com/SKNETWORKS-FAMILY-AICAMP/SKN09-1st-5Team/blob/readme/READ_ME/img_readme/minion_yj.jpg" width="200px;" alt="이윤재"/>
         </div>
       </td>
       <td align="center">
-        <img src=""width="200px;" alt="임수연"/>
+        <img src="https://github.com/SKNETWORKS-FAMILY-AICAMP/SKN09-1st-5Team/blob/readme/READ_ME/img_readme/minion_sy.jpg" width="200px;" alt="임수연"/>
       </td>
       <td align="center">
-        <img src="width="200px;" alt="허정윤"/>
+        <img src="https://github.com/SKNETWORKS-FAMILY-AICAMP/SKN09-1st-5Team/blob/readme/READ_ME/img_readme/minion_jy.jpg" width="200px;" alt="허정윤"/>
       </td>
     </tr>
     <tr>
@@ -69,8 +69,29 @@
 </br>
 
 # 시작 가이드
+## 설치/사용 방법
 
+###  GitHub에서 리포지토리 클론
 
+```bash
+git clone https://github.com/SKNETWORKS-FAMILY-AICAMP/SKN09-1st-5Team.git
+```
+
+###  라이브러리 설치
+
+```bssh
+cd SKN09-1st-5Team
+pip install -r requirements.txt
+```
+
+###  정보수집(크롤링코드 실행)
+```bssh
+python 파일이름.py
+``` 
+###  서비스 페이지 실행
+```bssh
+streamlit run app.py
+``` 
 <br>
 </br>
 
@@ -134,7 +155,7 @@
 </br>
 
 # ERD
-<td><img src="https://github.com/SKNETWORKS-FAMILY-AICAMP/SKN09-1st-5Team/blob/readme/READ_ME/img_readme/ERD.png"/></td>
+<td><img src="https://github.com/SKNETWORKS-FAMILY-AICAMP/SKN09-1st-5Team/blob/readme/READ_ME/img_readme/ERD.png" width="1000"/></td>
 
 
 <br>
