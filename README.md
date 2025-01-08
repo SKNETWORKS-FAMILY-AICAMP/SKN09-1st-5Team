@@ -109,7 +109,6 @@ streamlit run app.py
     <td><img src="https://img.shields.io/badge/VScode-007ACC?style=for-the-badge&logo=Vscode&logoColor=white"/></td>
     <td><img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=Git&logoColor=white"/></td>
     <td><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=GitHub&logoColor=white"/></td>
-    <td><img src="https://img.shields.io/badge/Plotly-3F4F75?style=for-the-badge&logo=Plotly&logoColor=white"/></td>
   </tr>  
 </table>
 
@@ -127,6 +126,7 @@ streamlit run app.py
     <td><img src="https://img.shields.io/badge/Selenium-43B02A?style=for-the-badge&logo=selenium&logoColor=white"/></td>
     <td><img src="https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white"/></td>
     <td><img src="https://img.shields.io/badge/mysql-4479A1?style=for-the-badge&logo=mysql&logoColor=white"/></td>
+    <td><img src="https://img.shields.io/badge/Plotly-3F4F75?style=for-the-badge&logo=Plotly&logoColor=white"/></td>
     <td></td>
   </tr>
 </table>
