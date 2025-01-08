@@ -37,7 +37,7 @@
         <img src="https://github.com/SKNETWORKS-FAMILY-AICAMP/SKN09-1st-5Team/blob/main/img_readme/minion_sy.jpg" width="200px;" alt="임수연"/>
       </td>
       <td align="center">
-        <img src="https://github.com/SKNETWORKS-FAMILY-AICAMP/SKN09-1st-5Team/blob/main/img_readme/minion_yj.jpg" width="200px;" alt="허정윤"/>
+        <img src="https://github.com/SKNETWORKS-FAMILY-AICAMP/SKN09-1st-5Team/blob/main/img_readme/minion_jy.jpg" width="200px;" alt="허정윤"/>
       </td>
     </tr>
     <tr>
