@@ -161,49 +161,50 @@ streamlit run app.py
 </br>
 
 # 디렉토리 구조
-|   .gitignore
-|   app.py
-|   directory_structure.txt
-|   faq_data.json
-|   README.md
-|   requirements.txt
-|
-+---1st_Project_crawling
-|   |   crawling.py
-|   |   faq.py
-|   |
-|   \---json
-|           crawling.py
-|           regist.py
-|
-+---car_cnt
-|       .gitkeep
-|
-+---data_city
-|       .gitkeep
-|
-+---db
-|       db_insert.py
-|       DDL.sql
-|
-+---img_readme
-|       ERD.png
-|       erd_fin.png
-|       minions_main.jpg
-|       minion_jy.jpg
-|       minion_kw.jpg
-|       minion_sy.jpg
-|       minion_yj.jpg
-|       sk_encore.png
-|       요구사항 명세서.png
-|
-\---pages
-        02_2019.py
-        03_2020.py
-        04_2021.py
-        05_2022.py
-        06_2023.py
-        07_2024.py
+
+| .gitignore  
+| app.py  
+| directory_structure.txt  
+| faq_data.json  
+| README.md  
+| requirements.txt  
+
++---1st_Project_crawling  
+| | crawling.py  
+| | faq.py  
+| |  
+| ---json  
+|     crawling.py  
+|     regist.py  
+
++---car_cnt  
+|     .gitkeep  
+
++---data_city  
+|     .gitkeep  
+
++---db  
+|     db_insert.py  
+|     DDL.sql  
+
++---img_readme  
+|     ERD.png  
+|     erd_fin.png  
+|     minions_main.jpg  
+|     minion_jy.jpg  
+|     minion_kw.jpg  
+|     minion_sy.jpg  
+|     minion_yj.jpg  
+|     sk_encore.png  
+|     요구사항 명세서.png  
+
+---pages  
+    02_2019.py  
+    03_2020.py  
+    04_2021.py  
+    05_2022.py  
+    06_2023.py  
+    07_2024.py
   
 # 한 줄 회고
 🤖<b>이광운</b>🤖\
