@@ -161,14 +161,13 @@ streamlit run app.py
 </br>
 
 # 디렉토리 구조
-
+```bash
 | .gitignore  
 | app.py  
 | directory_structure.txt  
 | faq_data.json  
 | README.md  
 | requirements.txt  
-
 +---1st_Project_crawling  
 | | crawling.py  
 | | faq.py  
@@ -176,17 +175,13 @@ streamlit run app.py
 | ---json  
 |     crawling.py  
 |     regist.py  
-
 +---car_cnt  
 |     .gitkeep  
-
 +---data_city  
 |     .gitkeep  
-
 +---db  
 |     db_insert.py  
-|     DDL.sql  
-
+|     DDL.sql 
 +---img_readme  
 |     ERD.png  
 |     erd_fin.png  
@@ -197,7 +192,6 @@ streamlit run app.py
 |     minion_yj.jpg  
 |     sk_encore.png  
 |     요구사항 명세서.png  
-
 ---pages  
     02_2019.py  
     03_2020.py  
@@ -205,7 +199,7 @@ streamlit run app.py
     05_2022.py  
     06_2023.py  
     07_2024.py
-  
+```
 # 한 줄 회고
 🤖<b>이광운</b>🤖\
 Streamlit session_state를 잘 고려하자.... 테스트는 여러 기기에서 꼭 해보자 
