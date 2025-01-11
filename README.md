@@ -91,7 +91,19 @@ pip install -r requirements.txt
 ###  정보수집(크롤링코드 실행)
 ```bssh
 python 파일이름.py
-``` 
+```
+여기서 파일 이름이라고 표시한 이유는
+-> 크롤링 한 데이터를 다른 곳에 사용할 유저도 있다고 가정해서 분리하여 제공한다.
+
+| crawling.py ->년도별 지역 보조금을 json 파일로 제공  
+
+| regist.py -> 년도별 지역 전기차 등록 수를 json파일로 제공  
+
+| | crawling.py -> 크롤링한 데이터를 MySQL과 연동해 DB에 바로 저장  
+
+| | faq.py -> faq 문항과 답변 크롤링 결과를 json 파일로 제공  
+
+
 ###  서비스 페이지 실행
 ```bssh
 streamlit run app.py
